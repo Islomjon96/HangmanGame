@@ -1,5 +1,12 @@
 // COLOR VARIABLES
-$color-primary: #fff;
+
+$color-darkblue: #34495e;
+
+$color-white: #fff;
+
+$color-blue: #2980b9;
+
+$color-black: #000;
 
 // FONT VARIABLES
 $font-primary: 'Segoe UI',
@@ -148,4 +155,43 @@ a {
 .container,
 .container-fluid {
     padding: 0;
+}
+
+.popup {
+    background: $color-blue;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba($color-black, .1);
+    padding: 2rem;
+    text-align: center;
+
+    &-container {
+        background-color: rgba($color-black, .3);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // display: flex;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+button {
+    cursor: pointer;
+    background-color: $color-white;
+    color: $color-blue;
+    border: 0;
+    margin-top: 2rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }

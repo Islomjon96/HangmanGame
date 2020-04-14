@@ -1,0 +1,89 @@
+main {
+    height: 100vh;
+    background-color: $color-darkblue;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        margin: 0 0 1rem 0;
+    }
+}
+
+.game-container {
+    padding: 2rem 3rem;
+    position: relative;
+    height: 35rem;
+    width: 45rem;
+}
+
+.figure {
+    &-container {
+        fill: transparent;
+        stroke: $color-white;
+        stroke-width: 4px;
+        stroke-linecap: round;
+    }
+
+    &-part {
+        display: none;
+    }
+}
+
+.wrong-letters-container {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    p {
+        margin: 0 0 .5rem;
+        font-size: 1.4rem;
+    }
+
+    span {
+        font-size: 2.4rem;
+    }
+}
+
+.word {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter {
+    border-bottom: 3px solid $color-blue;
+    display: inline-flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .3rem;
+    height: 5rem;
+    width: 2rem;
+}
+
+.notification-container {
+    background-color: rgba($color-black, .3);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    bottom: -5rem;
+    transition: transform .3s ease-in-out;
+
+    &.show {
+        transform: translateY(-5rem);
+    }
+
+    p {
+        margin: 0;
+    }
+}

@@ -5,11 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>Игра Hangman</title>
 </head>
 
 <body>
+    <main>
+        <h1>Игра Hangman</h1>
+        <p>Найдите спрятанное слово - Введите букву</p>
 
+        <div class="game-container">
+            <svg height="250" width="200" class="figure-container">
+                <!-- Основание -->
+                <line x1="60" y1="20" x2="140" y2="20" />
+                <line x1="140" y1="20" x2="140" y2="50" />
+                <line x1="60" y1="20" x2="60" y2="230" />
+                <line x1="20" y1="230" x2="100" y2="230" />
+
+                <!-- Голова -->
+                <circle cx="140" cy="70" r="20" class="figure-part" />
+                <!-- Тело -->
+                <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+                <!-- Руки -->
+                <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+                <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+                <!-- Ноги -->
+                <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+                <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+            </svg>
+
+            <div class="wrong-letters-container">
+                <div id="wrong-letters">
+                </div>
+            </div>
+
+            <div class="word" id="word">
+            </div>
+        </div>
+
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h2 id="final-message">
+                    Вы выиграли
+                </h2>
+                <button id="play-again">
+                    Перезапустить игру
+                </button>
+            </div>
+        </div>
+
+        <div class="notification-container" id="notification-container">
+            <p>Вы уже вводили эту букву</p>
+        </div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 

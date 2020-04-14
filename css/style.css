@@ -20,138 +20,128 @@ body {
   margin: 0 auto;
   position: relative; }
 
-.mtb-lg {
-  margin-top: 5rem !important;
-  margin-bottom: 5rem !important; }
-
-.mtb-lg-2 {
-  margin-top: 4rem !important;
-  margin-bottom: 4rem !important; }
-
-.mb-lg {
-  margin-bottom: 5rem !important; }
-
-.mb-lg-2 {
-  margin-bottom: 4rem !important; }
-
-.mt-lg-2 {
-  margin-top: 4rem !important; }
-
-.mt-lg {
-  margin-top: 5rem !important; }
-
-.mt-xl {
-  margin-top: 7rem !important; }
-
-.mb-xl {
-  margin-bottom: 7rem !important; }
-
-.mt-sm {
-  margin-top: 2rem !important; }
-
-.mb-md {
-  margin-bottom: 2rem !important; }
-
-.mb-sm {
-  margin-bottom: 1rem !important; }
-
-.ml-xxl {
-  margin-left: 10rem !important; }
-
-.mb-xxl {
-  margin-bottom: 10rem !important; }
-
 p {
   margin: 0; }
 
 h3 {
   text-transform: unset; }
 
-ol, ul {
+ol,
+ul {
   padding: 0; }
 
 a {
   text-decoration: none; }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   padding: 0; }
 
-.heading-1 {
-  font-size: 8rem;
-  color: #fff;
-  font-family: "PFDinTextCompPro", sans-serif;
-  font-weight: 300;
-  height: 18rem; }
+.popup {
+  background: #2980b9;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center; }
+  .popup-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center; }
 
-.heading-2 {
-  font-family: "PFDinTextCompPro", sans-serif;
-  line-height: 1;
-  font-size: 5rem;
-  color: #fff;
-  font-weight: 300;
-  display: flex;
-  align-items: center; }
-
-.heading-3 {
-  font-size: 3rem;
-  color: #303030;
-  font-family: "PFDinTextCompPro", sans-serif;
-  line-height: 1;
-  font-weight: 300;
-  display: flex;
-  align-items: flex-end; }
-
-.paragraph {
-  font-size: 1.6rem;
-  font-weight: 400; }
-  .paragraph--bold {
-    font-weight: 800; }
-  .paragraph--uppercase {
-    text-transform: uppercase; }
-  .paragraph--xxl {
-    font-size: 7rem;
-    font-family: "PFDinTextCompPro", sans-serif; }
-  .paragraph--xl {
-    font-size: 4.3rem;
-    line-height: 1; }
-  .paragraph--lg {
-    font-size: 3.4rem; }
-  .paragraph--md {
-    font-size: 1.8rem; }
-  .paragraph--sm {
-    font-size: 1.7rem; }
-
-.list li {
-  color: #c6c6c6;
-  color: #c6c6c6;
-  font-size: 1.7rem;
-  padding-left: 1.7rem;
-  line-height: 2.5rem;
-  position: relative;
-  list-style-type: none;
-  font-weight: 400; }
-
-.list-bullet {
-  display: inline-block;
-  max-width: .8rem;
-  max-height: .8rem;
-  min-width: 0.8rem;
-  min-height: 0.8rem;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #fff;
-  position: absolute;
-  top: 1rem;
-  left: 0; }
-
-.btn {
-  padding: 1rem 3rem .8rem 3rem;
+button {
   cursor: pointer;
-  left: 0;
-  transform: none;
-  margin: auto;
-  width: auto;
-  display: inline-block;
+  background-color: #fff;
+  color: #2980b9;
+  border: 0;
+  margin-top: 2rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem; }
+  button:active {
+    transform: scale(0.98); }
+  button:focus {
+    outline: none; }
+
+h1 {
+  font-size: 3.2rem; }
+
+h2 {
+  font-size: 2.6rem; }
+
+p {
+  font-size: 1.6rem; }
+
+main {
+  height: 100vh;
+  background-color: #34495e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
-  transition: all 0.2s;
-  background-color: #ffffff; }
+  overflow: hidden; }
+  main h1 {
+    margin: 0 0 1rem 0; }
+
+.game-container {
+  padding: 2rem 3rem;
+  position: relative;
+  height: 35rem;
+  width: 45rem; }
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round; }
+
+.figure-part {
+  display: none; }
+
+.wrong-letters-container {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right; }
+  .wrong-letters-container p {
+    margin: 0 0 .5rem;
+    font-size: 1.4rem; }
+  .wrong-letters-container span {
+    font-size: 2.4rem; }
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.letter {
+  border-bottom: 3px solid #2980b9;
+  display: inline-flex;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .3rem;
+  height: 5rem;
+  width: 2rem; }
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 2rem;
+  position: absolute;
+  bottom: -5rem;
+  transition: transform .3s ease-in-out; }
+  .notification-container.show {
+    transform: translateY(-5rem); }
+  .notification-container p {
+    margin: 0; }
